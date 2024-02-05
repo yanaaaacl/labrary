@@ -1,0 +1,272 @@
+html{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    font-family: 'Permanent Marker', cursive;
+    font-weight: 400;
+}
+
+/* font-family: 'Fascinate Inline', system-ui;
+
+ */
+
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container{
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.main{
+    flex-grow: 1;
+}
+
+.title{
+    font-family: 'Honk', system-ui;
+    font-size: 70px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.shelf{
+    background-color: rgb(218, 218, 121);
+    width: 1200px;
+   
+    border: 14px solid rgb(217, 71, 120);
+    border-radius: 20px;
+    position: relative;
+}
+
+.shelf-display{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px 10px;
+    background-color: rgb(217, 71, 120);
+    width: 800px;
+    
+    margin-top: 50px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 30px 30px 30px 45px;
+}
+
+.shelf-card{
+    width: 180px;
+    background-color: rgb(218, 218, 121);
+    padding: 20px 20px;
+    
+}
+
+.shelf-card--open{
+    width: 180px;
+    background-color: rgb(218, 218, 121);
+    padding: 20px 20px;
+}
+
+.description-book{
+    color: #000;
+    font-size: 14px;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.remove-btn{
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px 5px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.remove-btn:hover{
+    background-color: rgb(217, 71, 120);
+    transition: .3s ease;
+    border: 1px solid rgb(217, 71, 120);
+}
+
+.status-btn{
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.status-btn:hover{
+    background-color: rgb(217, 71, 120);
+    transition: .3s ease;
+    border: 1px solid rgb(217, 71, 120);
+}
+
+.shelf-card--title{
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 5px;
+    word-break: break-all;
+}
+
+.shelf-card--btn{
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.shelf-card--btn:hover{
+    background-color: rgb(217, 71, 120);
+    transition: .3s ease;
+    border: 4px solid rgb(217, 71, 120);
+}
+
+.open-modal{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 10px;
+    border: 4px solid rgb(217, 71, 120);
+    background-color: rgb(218, 218, 121);
+    color: #000;
+    font-size: 20px;
+    font-family: 'Fascinate Inline', system-ui;
+    cursor: pointer;
+}
+
+/* form */
+
+.new-book{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -200px;
+    margin-top: -150px;
+    padding: 20px 30px;
+    background-image: linear-gradient(#c9ffbf, #ffafbd);
+}
+
+.modal-input{
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+}
+
+.book-info{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px 10px;
+}
+
+.book-info--legend{
+    font-family: 'Honk', system-ui;
+    font-size: 30px;
+}
+
+.book-info--title{
+    font-size: 20px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+
+}
+
+.books-title{
+    border-radius: 10px;
+    padding: 3px 3px;
+}
+
+#title-book{
+    font-family: 'Fascinate Inline', system-ui;
+    font-size: 16px;
+}
+
+#title-author{
+    font-family: 'Fascinate Inline', system-ui;
+    font-size: 16px;
+}
+
+#title-pages{
+    font-family: 'Fascinate Inline', system-ui;
+    font-size: 16px;
+}
+
+.books-radio{
+    padding-bottom: 10px;
+}
+
+.read-radio{
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.read-l{
+    text-align: center;
+}
+
+.submit-buttons{
+    display: flex;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-btn{
+    border: 2px solid rgb(218, 218, 121);
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Fascinate Inline', system-ui;
+    padding: 5px 5px;
+}
+
+.form-btn:hover{
+    border: 4px solid #000;
+    background-color: rgb(217, 71, 120);
+    transition: .3s ease-in all;
+}

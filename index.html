@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIBRARY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Honk&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">The Library</h1>
+        </div>
+        <main class="main">
+            <div class="container">
+                <div class="shelf">
+                    <div class="shelf-display">
+
+                    </div>
+                    <button type="button" id="btn-open-modal" class="open-modal">New Book?</button>
+                </div>
+                
+            </div>
+        </main>
+        <dialog id="modal-book" class="new-book">
+            <form action="#" name="new-book" class="flex-row" method="dialog">
+                <div class="modal-input">
+                    <fieldset class="book-info">
+                        <legend class="book-info--legend">Book Info</legend>
+                        <label for="title-book" class="book-info--title">Title</label>
+                            <input type="text" name="title-book" placeholder="" id="title-book" class="books-title">
+                        <label class="book-info--title" for="title-author">Author</label>
+                            <input type="text" name="title-author" placeholder="" id="title-author" class="books-title">
+                        <label class="book-info--title" for="title-pages">Pages</label>
+                            <input type="number" name="title-pages" placeholder="" id="title-pages" class="books-title">
+                    </fieldset>
+                    <fieldset class="read-radio">
+                        <legend class="book-info--legend">Read?</legend>
+                        <label for="read-yes" class="book-info--title read-l">Yes</label>
+                        <input id="read-yes" name="read" value="yes" type="radio" class="books-radio">
+                        <label for="read-no" class="book-info--title read-l">No</label>
+                        <input id="read-no" name="read" value="no" type="radio" class="books-radio">
+                    </fieldset>
+                </div>
+                <div class="submit-buttons">
+                    <button type="button" class="form-btn" id="modal-cancel">Cancel</button>
+                    <button type="submit" class="form-btn" id="submit-book">Add book</button>
+                </div>
+            </form>
+        </dialog>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
